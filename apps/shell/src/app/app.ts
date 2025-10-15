@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { navigate } from './store/actions/shell.actions';
 
 @Component({
   imports: [RouterModule],
@@ -7,4 +9,10 @@ import { RouterModule } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {}
+export class App {
+  private readonly store = inject(Store);
+
+  navigate(path: string) {
+    this.store.dispatch(navigate({ path }));
+  }
+}

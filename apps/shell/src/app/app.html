@@ -1,5 +1,5 @@
 <ul class="remote-menu">
-  <li><a routerLink="products">Products</a></li>
-  <li><a routerLink="cart">Cart</a></li>
+  <li><a routerLink="products" (click)="navigate('products')">Products</a></li>
+  <li><a routerLink="cart" (click)="navigate('cart')">Cart</a></li>
 </ul>
 <router-outlet></router-outlet>
