@@ -1,5 +1,12 @@
+@let state = state$ | async;
+
 <ul class="remote-menu">
   <li><a routerLink="products" (click)="navigate('products')">Products</a></li>
   <li><a routerLink="cart" (click)="navigate('cart')">Cart</a></li>
 </ul>
+
+@if (state) {
+<div>{{ state | json }}</div>
+}
+
 <router-outlet></router-outlet>
