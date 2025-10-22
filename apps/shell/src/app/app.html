@@ -1,12 +1,10 @@
-@let state = state$ | async;
+<div class="app-container">
+  <ui-navbar [navItems]="navItems">
+    <div navbar-logo>MFE App</div>
+    <div navbar-footer>Settings</div>
+  </ui-navbar>
 
-<ul class="remote-menu">
-  <li><a routerLink="products" (click)="navigate('products')">Products</a></li>
-  <li><a routerLink="cart" (click)="navigate('cart')">Cart</a></li>
-</ul>
-
-@if (state) {
-<div>{{ state | json }}</div>
-}
-
-<router-outlet></router-outlet>
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

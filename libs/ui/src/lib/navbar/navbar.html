@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="navbar-header">
+    <div class="navbar-logo">
+      <ng-content select="[navbar-logo]"></ng-content>
+    </div>
+  </div>
+
+  <ul class="navbar-links">
+    @for (item of navItems; track item.path) {
+    <li>
+      <a [routerLink]="item.path" routerLinkActive="active">
+        {{ item.label }}
+      </a>
+    </li>
+    }
+  </ul>
+
+  <div class="navbar-footer">
+    <ng-content select="[navbar-footer]"></ng-content>
+  </div>
+</nav>
