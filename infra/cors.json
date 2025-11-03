@@ -1,0 +1,6 @@
+[
+  {
+    "origin": ["https://mfe-poc.cloudstats.org"],
+    "method": ["GET", "OPTIONS"]
+  }
+]
