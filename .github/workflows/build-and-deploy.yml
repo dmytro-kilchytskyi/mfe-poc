@@ -35,19 +35,19 @@ jobs:
         uses: 'google-github-actions/upload-cloud-storage@v3'
         with:
           path: 'dist/apps/shell'
-          destination: 'YOUR_SHELL_BUCKET_NAME'
+          destination: 'mfe-poc-shell'
           parent: false
 
       - name: Deploy cart to GCS
         uses: 'google-github-actions/upload-cloud-storage@v3'
         with:
           path: 'dist/apps/cart'
-          destination: 'YOUR_CART_BUCKET_NAME'
+          destination: 'mfe-poc-cart'
           parent: false
 
       - name: Deploy products to GCS
         uses: 'google-github-actions/upload-cloud-storage@v3'
         with:
           path: 'dist/apps/products'
-          destination: 'YOUR_PRODUCTS_BUCKET_NAME'
+          destination: 'mfe-poc-products'
           parent: false
